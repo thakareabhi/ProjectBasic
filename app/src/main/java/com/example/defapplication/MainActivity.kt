@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if(checkSelfPermission(android.Manifest.permission.CAMERA)==PackageManager.PERMISSION_DENIED ||checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)==PackageManager.PERMISSION_DENIED)
             {
                 val premissions= arrayOf(android.Manifest.permission.CAMERA,android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
-               requestPermissions(premissions,PERMISSION_CODE)
+                    requestPermissions(premissions,PERMISSION_CODE)
             }
             else
             {
