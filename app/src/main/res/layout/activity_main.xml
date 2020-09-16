@@ -7,24 +7,56 @@
     android:layout_gravity="center_horizontal"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp">
 
 
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="400dp"
-        android:layout_height="500dp"
-        android:rotation="90"
-        app:srcCompat="@drawable/ic_launcher_background" />
+
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/button11"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Text Building"
+        android:textColor="@color/white"
+        android:background="@drawable/btnrnd"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="458dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button12"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnrnd"
+        android:text="Identify Sign"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <TextView
+    android:id="@+id/textView3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="" />
+
+    <Button
+        android:id="@+id/button13"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnrnd"
+        android:text="Youtube"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="458dp" />
+
 
 </LinearLayout>
