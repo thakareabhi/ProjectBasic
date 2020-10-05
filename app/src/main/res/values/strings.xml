@@ -1,3 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DefApplication</string>
+    <string name="des">This video is for beginners to learn American sign language. In this video person enacts the sign and text pops up with its name. Here special attention is given to the lip-sync. Here basic signs for numbers,alphabets, and daily signs are taught.
+We can learn how to talk using sign languages or also understand what mute or deaf person wants to say. This is video is very helpful for beginner mute and deaf or even person who can speak for understanding and learning. The signs are clear and slowly taught.This video has numbers from 0 to 9 , alphabets from A to Z and words like good,bad, Family, yes,no sentences like how are you, I am good, I know little sign language, I dont understand etc.This video can help person not knowing sign language communicate with the mute and deaf person.This video helps your learn basics of communication in only and only 10 minutes.This video is made by professionals and made available for anyone to begin.</string>
 </resources>

@@ -1,18 +1,28 @@
 package com.example.defapplication
 
-import android.content.Intent
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.google.android.youtube.player.*
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.youtube.player.YouTubeBaseActivity
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
+import com.google.android.youtube.player.YouTubePlayer.FULLSCREEN_FLAG_CONTROL_ORIENTATION
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_youtubeact.*
 
 
 class Youtubeact : YouTubeBaseActivity() {
+    //val VIDEO_ID:String="";
+     lateinit var database: DatabaseReference.CompletionListener
 
-    companion object {
-        val VIDEO_ID: String = "YqggV_wGhM0";
+     lateinit var binding: Youtubeact
+        var vidid:String=""
+        companion object {
         val YOUTUBE_API_KEY: String = "AIzaSyAGYLzqvpEt3RECmwamycY217516f6frug"
     }
 
@@ -20,14 +30,21 @@ class Youtubeact : YouTubeBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtubeact)
+         vidid=intent.getStringExtra("VDID")
+
+
+
 
         initUI()
     }
 
+
      fun initUI() {
         youtubePlayerInit = object : YouTubePlayer.OnInitializedListener {
             override fun onInitializationSuccess(p0: YouTubePlayer.Provider?, youtubePlayer: YouTubePlayer?, p2: Boolean) {
-                youtubePlayer?.loadVideo(VIDEO_ID)
+
+                youtubePlayer?.loadVideo(vidid)
+
             }
 
             override fun onInitializationFailure(p0: YouTubePlayer.Provider?, p1: YouTubeInitializationResult?) {

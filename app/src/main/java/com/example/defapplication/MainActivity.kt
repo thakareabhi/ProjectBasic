@@ -28,7 +28,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         button13.setOnClickListener {
-            val intent = Intent(this, Youtubeact::class.java)
+            val intent = Intent(this, FetchData::class.java)
+            startActivity(intent)
+        }
+
+        button14.setOnClickListener {
+            val intent = Intent(this, AlertActi::class.java)
             startActivity(intent)
         }
 
