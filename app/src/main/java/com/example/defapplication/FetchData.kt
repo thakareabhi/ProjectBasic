@@ -25,13 +25,16 @@ class FetchData : AppCompatActivity() {
 
             //vidid = "2vP1CMK4I3Y"
             //demoRef.setValue(vidid)
-
+            val intent = Intent(this, Youtubeact::class.java)
             demoRef.addListenerForSingleValueEvent(object : ValueEventListener {
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val value = dataSnapshot.getValue(String::class.java)
                     vidid=value.toString();
                     Log.d("taga","scev"+value)
+
+                    intent.putExtra("VDID",vidid)
+                    startActivity(intent)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
@@ -41,9 +44,7 @@ class FetchData : AppCompatActivity() {
             })
 
 
-            val intent = Intent(this, Youtubeact::class.java)
-            intent.putExtra("VDID",vidid)
-            startActivity(intent)
+
         }
 
     }

@@ -56,6 +56,11 @@ class AlertActiviity : AppCompatActivity() {
                     imgid1.isVisible=false
                     v.vibrate(pattern, 0)
                 }
+                else
+                {
+                    imgid.isVisible=false
+                    imgid1.isVisible=true
+                }
                 if(value.equals("false"))
                 {
                     v.cancel();
