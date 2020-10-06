@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         button14.setOnClickListener {
-            val intent = Intent(this, AlertActi::class.java)
+            val intent = Intent(this, AlertActiviity::class.java)
             startActivity(intent)
         }
 

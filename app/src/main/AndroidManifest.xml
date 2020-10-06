@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AlertActi"></activity>
+        <activity android:name=".AlertActiviity"></activity>
         <activity android:name=".FetchData" />
         <activity
             android:name=".Youtubeact"

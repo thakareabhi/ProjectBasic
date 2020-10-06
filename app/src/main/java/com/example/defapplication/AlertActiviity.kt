@@ -3,24 +3,29 @@ package com.example.defapplication
 import android.content.Context
 import android.os.Bundle
 import android.os.Vibrator
-import android.util.Log
+import android.view.View
+import android.view.*
+import android.widget.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_alertacti.*
+import kotlinx.android.synthetic.main.activity_alert_activiity.*
 
-
-class AlertActi : AppCompatActivity() {
+class AlertActiviity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_alertacti)
+        setContentView(R.layout.activity_alert_activiity)
 
         val rootRef: DatabaseReference = FirebaseDatabase.getInstance().reference
         val demoRef: DatabaseReference = rootRef.child("Vibrate").child("V1")
 
 
         val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+
+        imgid.isVisible=false
+        imgid1.isVisible=true
 
 
         /*demoRef.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -47,6 +52,8 @@ class AlertActi : AppCompatActivity() {
                 if(value.equals("true"))
                 {
                     val pattern = longArrayOf(0, 1000, 1000)
+                    imgid.isVisible=true
+                    imgid1.isVisible=false
                     v.vibrate(pattern, 0)
                 }
                 if(value.equals("false"))
@@ -57,7 +64,7 @@ class AlertActi : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@AlertActi, "Error fetching data", Toast.LENGTH_LONG)
+                Toast.makeText(this@AlertActiviity, "Error fetching data", Toast.LENGTH_LONG)
                     .show()
             }
         })
@@ -80,8 +87,11 @@ class AlertActi : AppCompatActivity() {
 // To repeat the pattern from any other point, you could increase the index, e.g. '1'
 
 
-        button15.setOnClickListener {
+        button20.setOnClickListener {
+            imgid.isVisible=false
+            imgid1.isVisible=true
             v.cancel();
+
         }
     }
 }
