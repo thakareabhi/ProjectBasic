@@ -38,7 +38,7 @@ class FetchData : AppCompatActivity() {
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
-                    Toast.makeText(this@FetchData, "Error fetching data", Toast.LENGTH_LONG)
+                    Toast.makeText(this@FetchData, "Error fetching data from firebase-Invalid Data Object", Toast.LENGTH_LONG)
                         .show()
                 }
             })
