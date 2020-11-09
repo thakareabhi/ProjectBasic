@@ -30,7 +30,7 @@ class Youtubeact : YouTubeBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtubeact)
-         vidid=intent.getStringExtra("VDID")
+         vidid=intent.getStringExtra("ID")
 
 
 
