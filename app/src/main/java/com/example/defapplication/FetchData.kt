@@ -17,12 +17,12 @@ class FetchData : AppCompatActivity() {
 
 
         val rootRef: DatabaseReference = FirebaseDatabase.getInstance().reference
-        val demoRef: DatabaseReference = rootRef.child("VideoStrings").child("Video")
+       // val demoRef: DatabaseReference = rootRef.child("VideoStrings").child("Video")
         var vidid=""
 
 
         button17.setOnClickListener {
-
+            val demoRef: DatabaseReference = rootRef.child("VideoStrings").child("Video")
             //vidid = "2vP1CMK4I3Y"
             //demoRef.setValue(vidid)
             val intent = Intent(this, VideoSelector::class.java)
@@ -45,10 +45,61 @@ class FetchData : AppCompatActivity() {
                         .show()
                 }
             })
-
-
-
         }
+
+        button171.setOnClickListener {
+            val demoRef: DatabaseReference = rootRef.child("VideoStrings").child("Video1")
+            //vidid = "2vP1CMK4I3Y"
+            //demoRef.setValue(vidid)
+            val intent = Intent(this, VideoSelector::class.java)
+            //val intent = Intent(this, Youtubeact::class.java)
+
+            demoRef.addListenerForSingleValueEvent(object : ValueEventListener {
+
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    val value = dataSnapshot.getValue(String::class.java)
+                    vidid=value.toString();
+                    Log.d("taga","scev"+value)
+
+
+                    intent.putExtra("VDID",vidid)
+                    startActivity(intent)
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(this@FetchData, "Error fetching data from firebase-Invalid Data Object", Toast.LENGTH_LONG)
+                        .show()
+                }
+            })
+        }
+
+        button172.setOnClickListener {
+            val demoRef: DatabaseReference = rootRef.child("VideoStrings").child("Video2")
+            //vidid = "2vP1CMK4I3Y"
+            //demoRef.setValue(vidid)
+            val intent = Intent(this, VideoSelector::class.java)
+            //val intent = Intent(this, Youtubeact::class.java)
+
+            demoRef.addListenerForSingleValueEvent(object : ValueEventListener {
+
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    val value = dataSnapshot.getValue(String::class.java)
+                    vidid=value.toString();
+                    Log.d("taga","scev"+value)
+
+
+                    intent.putExtra("VDID",vidid)
+                    startActivity(intent)
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(this@FetchData, "Error fetching data from firebase-Invalid Data Object", Toast.LENGTH_LONG)
+                        .show()
+                }
+            })
+        }
+
+
 
     }
 }

@@ -6,15 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:gravity="center"
+    android:paddingTop="20dp"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp">
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
 
+    <com.synnapps.carouselview.CarouselView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/carouselView"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp">
 
+    </com.synnapps.carouselview.CarouselView>
 
-
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="" />
 
 
     <Button

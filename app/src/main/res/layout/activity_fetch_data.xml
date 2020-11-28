@@ -15,10 +15,39 @@
         android:id="@+id/button17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PlayVideo"
+        android:text="Starter"
         android:textColor="@color/white"
         android:background="@drawable/btnrnd"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="458dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:id="@+id/button171"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intermediate"
+        android:textColor="@color/white"
+        android:background="@drawable/btnrnd"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="458dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:id="@+id/button172"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advanced"
+        android:textColor="@color/white"
+        android:background="@drawable/btnrnd"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+
 
 </LinearLayout>
