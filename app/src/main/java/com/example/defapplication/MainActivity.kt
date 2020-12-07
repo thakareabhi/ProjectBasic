@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
     var sampleImages = intArrayOf(
         R.drawable.pic1,
         R.drawable.pic2,
-        R.drawable.pic3,
-        R.drawable.pic4,
-        R.drawable.pic5
+        R.drawable.pic3
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
